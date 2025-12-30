@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Card from './components/Card';
 import Counter from './components/Counter';
+import Love from './components/Love';
 
 type Student = {
   name: string;
@@ -42,6 +43,7 @@ function App() {
         })}
       </div>
       <Counter />
+      <Love />
     </>
   )
 }
