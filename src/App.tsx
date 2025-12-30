@@ -1,49 +1,25 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Card from './components/Card';
-import Counter from './components/Counter';
-import Love from './components/Love';
-
-type Student = {
-  name: string;
-  nim: number;
-  semester: number;
-};
+import { Routes, Route } from 'react-router'
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/Contact';
+import NotFound from './pages/NotFound';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
-  const students: Student[] = [
-    {
-      name: 'Budi Santoso',
-      nim: 12345678,
-      semester: 4,
-    },
-    {
-      name: 'Siti Aminah',
-      nim: 87654321,
-      semester: 2,
-    },
-    {
-      name: 'Andi Wijaya',
-      nim: 11223344,
-      semester: 6,
-    },
-    {
-      name: 'Fikri Amrullah',
-      nim: 224260064,
-      semester: 7,
-    },
-  ];
-
   return (
     <>
       <Navbar />
-      <div className='container'>
-        {students.map((students) => {
-          return <Card key={students.nim} name={students.name} nim={students.nim} semester={students.semester} />
-        })}
-      </div>
-      <Counter />
-      <Love />
+      <Routes>
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/products' element={<ProductsPage />}></Route>
+        <Route path='/products/:slug' element={<ProductDetailPage />}></Route>
+        <Route path='/about' element={<AboutPage />}></Route>
+        <Route path='/contact' element={<ContactPage />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+      </Routes>
     </>
   )
 }

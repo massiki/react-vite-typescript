@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -5,9 +7,10 @@ const Navbar = () => {
         MyApp
       </div>
       <ul className="nav-content">
-        <li><a href="#" className="nav-link">Home</a></li>
-        <li><a href="#" className="nav-link">About</a></li>
-        <li><a href="#" className="nav-link">Contact</a></li>
+        <NavLink to={'/'}>Home</NavLink>
+        <NavLink to={'/products'}>Products</NavLink>
+        <NavLink to={'/about'}>About</NavLink>
+        <NavLink to={'/contact'}>Contact</NavLink>
       </ul>
     </nav>
   );
