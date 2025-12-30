@@ -92,3 +92,22 @@
   height: 40px;
   cursor: pointer;
 }
+
+/* love */
+.love {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.love-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #e25555;
+}
+
+.love-toggle span {
+  font-size: 5rem;
+}
