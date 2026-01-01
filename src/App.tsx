@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/Contact';
 import NotFound from './pages/NotFound';
 import ProductDetailPage from './pages/ProductDetailPage';
+import FormPage from './pages/FormPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/products/:slug' element={<ProductDetailPage />}></Route>
         <Route path='/about' element={<AboutPage />}></Route>
         <Route path='/contact' element={<ContactPage />}></Route>
+        <Route path='/form' element={<FormPage />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </>

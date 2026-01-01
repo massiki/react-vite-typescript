@@ -1,0 +1,5 @@
+npm install react-hook-form zod @hookform/resolvers
+
+react-hook-form = Simple form validation with React Hook Form.
+zod = TypeScript-first schema validation with static type inference
+@hookform/resolvers = The function allows you to use any external validation library such as Yup, Zod, Joi, Vest, Ajv and many others
