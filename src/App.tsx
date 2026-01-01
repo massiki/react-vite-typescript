@@ -8,6 +8,7 @@ import ContactPage from './pages/Contact';
 import NotFound from './pages/NotFound';
 import ProductDetailPage from './pages/ProductDetailPage';
 import FormPage from './pages/FormPage';
+import SigIn from './pages/SigIn';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/about' element={<AboutPage />}></Route>
         <Route path='/contact' element={<ContactPage />}></Route>
         <Route path='/form' element={<FormPage />}></Route>
+        <Route path='/register' element={<SigIn />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </>
