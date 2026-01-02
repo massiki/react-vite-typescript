@@ -1,26 +1,26 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
+      "id": "6b1f",
+      "title": "Postingan 1",
+      "views": 0
     },
     {
-      "id": "2",
-      "title": "another title",
-      "views": 200
+      "id": "0730",
+      "title": "Postingan 2",
+      "views": 0
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
   "profile": {
