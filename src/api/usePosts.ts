@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { axiosIntance } from "../lib/axios";
 
 type PostType = {
   id: string;
@@ -12,13 +13,17 @@ export const usePosts = () => {
 
   const getPosts = async () => {
     try {
-      setIsLoading(true)
-      const response = await fetch('http://localhost:3000/posts', {
-        method: 'GET'
-      })
+      // use fetch native
+      // setIsLoading(true)
+      // const response = await fetch('http://localhost:3000/posts', {
+      //   method: 'GET'
+      // })
+      // const data = await response.json()
+      // setPosts(data)
 
-      const data = await response.json()
-      setPosts(data)
+      setIsLoading(true)
+      const response = await axiosIntance.get<PostType[]>('/posts')
+      setPosts(response.data)
     } catch (error) {
       console.log((error as Error).message)
     } finally {
